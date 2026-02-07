@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 1 - Página Web Responsive</title>
+    
+    <!-- Enlaces a recursos externos -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Enlaces a archivos CSS locales -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/logoespe.png" type="image/png">
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="container">
+       
+        <!-- Header: Encabezado del sitio -->
+        <header class="header">
+            <div class="container">
+                <!-- Logo del sitio web -->
+                <div class="logo">
+                    <img src="images/logoespe.png" alt="Logo ESPE" class="logo-espe">
+                    <div class="logo-text">
+                        <h1><i class="fas fa-file-code"></i> Actividad 1 - Página Web Responsive</h1>
+                        <p>Fundamentos de Sistemas Web - Universidad ESPE</p>
+                    </div>
+                </div>
+               
+                <!-- Menú de navegación principal -->
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                        <li><a href="#actividad"><i class="fas fa-star"></i> Actividad 1</a></li>
+                        <li><a href="index.html#actividad2"><i class="fas fa-edit"></i> Actividad 2</a></li>
+                        <li><a href="index.html#actividad3"><i class="fas fa-user-plus"></i> Actividad 3</a></li>
+                        <li><a href="index.html#informacion"><i class="fas fa-info-circle"></i> Información</a></li>
+                    </ul>
+                   
+                    <!-- Ícono de menú hamburguesa para dispositivos móviles -->
+                    <div class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Sección Hero de la Actividad 1 -->
+        <section class="hero" id="actividad">
+            <div class="hero-content">
+                <h2>Actividad de Aprendizaje No. 1</h2>
+                <h3>Página Web Completa con Diseño Responsive</h3>
+                <p>Desarrollo de una página web completa utilizando HTML5 semántico y CSS3 con enfoque en diseño responsive que se adapte a diferentes dispositivos y resoluciones.</p>
+                <div class="hero-buttons">
+                    <a href="#descripcion" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Ver Descripción
+                    </a>
+                    <a href="#implementacion" class="btn btn-secondary">
+                        <i class="fas fa-code"></i> Ver Implementación
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-image.jpg" alt="Diseño web responsive">
+            </div>
+        </section>
+
+        <!-- Descripción de la Actividad -->
+        <section class="descripcion-actividad-detallada" id="descripcion">
+            <h2><i class="fas fa-clipboard-list"></i> Descripción de la Actividad</h2>
+            
+            <div class="descripcion-content">
+                <div class="descripcion-text">
+                    <h3>Objetivo General</h3>
+                    <p>Crear una página web completa con diseño responsive que demuestre el dominio de HTML5 semántico, CSS3 y principios de diseño web adaptativo.</p>
+                    
+                    <h3>Requisitos Específicos</h3>
+                    <ul>
+                        <li><strong>Estructura HTML5 semántica:</strong> Uso adecuado de etiquetas como &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;aside&gt;, &lt;footer&gt;</li>
+                        <li><strong>Diseño responsive:</strong> La página debe verse correctamente en dispositivos de diferente resolución (escritorio, tabletas, móviles)</li>
+                        <li><strong>Organización del contenido:</strong> Implementación de cabecera, menú de navegación, contenido principal y pie de página</li>
+                        <li><strong>Estilos CSS personalizados:</strong> Uso de hojas de estilo para dar apariencia atractiva a todos los elementos</li>
+                        <li><strong>Contenido organizado:</strong> Sección de noticias y barra lateral con contenido relacionado</li>
+                    </ul>
+                    
+                    <h3>Tecnologías Utilizadas</h3>
+                    <div class="tecnologias">
+                        <span class="tecnologia"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="tecnologia"><i class="fab fa-css3-alt"></i> CSS3</span>
+                        <span class="tecnologia"><i class="fas fa-mobile-alt"></i> Responsive Design</span>
+                        <span class="tecnologia"><i class="fab fa-js"></i> JavaScript Básico</span>
+                    </div>
+                </div>
+                
+                <div class="descripcion-imagen">
+                    <div class="imagen-container">
+                        <img src="https://via.placeholder.com/400x300/3498db/ffffff?text=Responsive+Design" alt="Diseño Responsive">
+                        <p class="imagen-desc">Diseño que se adapta a diferentes dispositivos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementación de la Actividad -->
+        <section class="implementacion-actividad" id="implementacion">
+            <h2><i class="fas fa-laptop-code"></i> Implementación de la Actividad</h2>
+            <p class="section-subtitle">A continuación se muestra la página web completa desarrollada para la Actividad 1.</p>
+            
+            <!-- Cabecera de la página web -->
+            <div class="cabecera-actividad">
+                <div class="container">
+                    <h1><i class="fas fa-globe"></i> GDTeam Solutions</h1>
+                    <p class="cabecera-subtitle">Soluciones Digitales Innovadoras</p>
+                </div>
+            </div>
+           
+            <!-- Menú principal de la página web -->
+            <section class="menu-principal-actividad">
+                <div class="container">
+                    <nav>
+                        <ul>
+                            <li><a href="#"><i class="fas fa-home"></i> Inicio</a></li>
+                            <li><a href="#"><i class="fas fa-briefcase"></i> Servicios</a></li>
+                            <li><a href="#"><i class="fas fa-box"></i> Productos</a></li>
+                            <li><a href="#"><i class="fas fa-users"></i> Nosotros</a></li>
+                            <li><a href="#"><i class="fas fa-envelope"></i> Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+           
+            <!-- Contenido principal de la página web -->
+            <main class="contenido-principal-actividad container">
+                <!-- Sección de noticias -->
+                <section class="seccion-noticias">
+                    <h2><i class="fas fa-newspaper"></i> Últimas Noticias</h2>
+                    <div class="noticias">
+                        <!-- Noticia 1 -->
+                        <article class="noticia">
+                            <div class="noticia-img noticia-1"></div>
+                            <div class="noticia-contenido">
+                                <h3>Lanzamiento de Nueva Plataforma</h3>
+                                <p class="noticia-fecha"><i class="far fa-calendar"></i> 15 de Enero, 2024</p>
+                                <p>Hemos lanzado nuestra nueva plataforma de gestión empresarial con características innovadoras y mejoras significativas en la experiencia de usuario.</p>
+                                <a href="#" class="noticia-link">Leer más <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                       
+                        <!-- Noticia 2 -->
+                        <article class="noticia">
+                            <div class="noticia-img noticia-2"></div>
+                            <div class="noticia-contenido">
+                                <h3>Conferencia de Tecnología 2024</h3>
+                                <p class="noticia-fecha"><i class="far fa-calendar"></i> 10 de Enero, 2024</p>
+                                <p>Participaremos como expositores en la Conferencia Internacional de Tecnología 2024, donde presentaremos nuestras soluciones más innovadoras.</p>
+                                <a href="#" class="noticia-link">Leer más <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                       
+                        <!-- Noticia 3 -->
+                        <article class="noticia">
+                            <div class="noticia-img noticia-3"></div>
+                            <div class="noticia-contenido">
+                                <h3>Expansión a Nuevos Mercados</h3>
+                                <p class="noticia-fecha"><i class="far fa-calendar"></i> 5 de Enero, 2024</p>
+                                <p>Estamos expandiendo nuestras operaciones a nuevos mercados internacionales, llevando nuestras soluciones digitales a más países de Latinoamérica.</p>
+                                <a href="#" class="noticia-link">Leer más <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+               
+                <!-- Sección de promociones -->
+                <aside class="promociones">
+                    <h2><i class="fas fa-tags"></i> Ofertas Especiales</h2>
+                    
+                    <!-- Promoción 1 -->
+                    <div class="promocion">
+                        <div class="promocion-header">
+                            <span class="promocion-badge"><i class="fas fa-fire"></i> Hot</span>
+                            <h3>Descuento del 40%</h3>
+                        </div>
+                        <p>En todos nuestros servicios de desarrollo web durante el mes de enero. Oferta limitada por tiempo.</p>
+                        <button class="btn btn-promocion">
+                            <i class="fas fa-shopping-cart"></i> Aprovechar Oferta
+                        </button>
+                    </div>
+                    
+                    <!-- Promoción 2 -->
+                    <div class="promocion">
+                        <div class="promocion-header">
+                            <span class="promocion-badge"><i class="fas fa-shipping-fast"></i> Envío</span>
+                            <h3>Envío Gratis</h3>
+                        </div>
+                        <p>Para todos los pedidos superiores a $100 en productos digitales. Válido para todo el catálogo.</p>
+                        <button class="btn btn-promocion">
+                            <i class="fas fa-box"></i> Ver Catálogo
+                        </button>
+                    </div>
+                    
+                    <!-- Promoción 3 -->
+                    <div class="promocion">
+                        <div class="promocion-header">
+                            <span class="promocion-badge"><i class="fas fa-gift"></i> Regalo</span>
+                            <h3>2x1 en Consultoría</h3>
+                        </div>
+                        <p>Contrata una consultoría tecnológica y obtén otra completamente gratis. Válido para nuevos clientes.</p>
+                        <button class="btn btn-promocion">
+                            <i class="fas fa-calendar-check"></i> Agendar Cita
+                        </button>
+                    </div>
+                    
+                    <!-- Banner de suscripción -->
+                    <div class="suscripcion">
+                        <h3><i class="fas fa-envelope"></i> Newsletter</h3>
+                        <p>Suscríbete para recibir nuestras mejores ofertas y noticias.</p>
+                        <div class="suscripcion-form">
+                            <input type="email" placeholder="Tu email" class="suscripcion-input">
+                            <button class="btn btn-suscripcion">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </aside>
+            </main>
+            
+            <!-- Sección de características -->
+            <section class="caracteristicas-empresa">
+                <div class="container">
+                    <h2><i class="fas fa-star"></i> Por qué Elegirnos</h2>
+                    <div class="caracteristicas-grid">
+                        <div class="caracteristica">
+                            <div class="caracteristica-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h3>Diseño Responsive</h3>
+                            <p>Todos nuestros sitios web se adaptan perfectamente a cualquier dispositivo.</p>
+                        </div>
+                        <div class="caracteristica">
+                            <div class="caracteristica-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h3>Rendimiento Óptimo</h3>
+                            <p>Sitios web rápidos y optimizados para mejor experiencia de usuario.</p>
+                        </div>
+                        <div class="caracteristica">
+                            <div class="caracteristica-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Seguridad Garantizada</h3>
+                            <p>Implementamos las mejores prácticas de seguridad en todos nuestros proyectos.</p>
+                        </div>
+                        <div class="caracteristica">
+                            <div class="caracteristica-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h3>Soporte 24/7</h3>
+                            <p>Equipo de soporte disponible para atender cualquier consulta o problema.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Footer de la página web -->
+            <footer class="footer-actividad">
+                <div class="container">
+                    <div class="footer-grid-actividad">
+                        <div class="footer-col-actividad">
+                            <h3><i class="fas fa-globe"></i> GDTeam Solutions</h3>
+                            <p>Especialistas en desarrollo web responsive y soluciones digitales innovadoras.</p>
+                            <div class="redes-sociales">
+                                <a href="#" class="red-social"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="red-social"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="red-social"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="red-social"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        
+                        <div class="footer-col-actividad">
+                            <h3>Enlaces Rápidos</h3>
+                            <ul>
+                                <li><a href="#"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                                <li><a href="#"><i class="fas fa-chevron-right"></i> Servicios</a></li>
+                                <li><a href="#"><i class="fas fa-chevron-right"></i> Productos</a></li>
+                                <li><a href="#"><i class="fas fa-chevron-right"></i> Nosotros</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-col-actividad">
+                            <h3>Contacto</h3>
+                            <ul class="contact-info-actividad">
+                                <li><i class="fas fa-map-marker-alt"></i> Quito, Ecuador</li>
+                                <li><i class="fas fa-phone"></i> +593 99 999 9999</li>
+                                <li><i class="fas fa-envelope"></i> info@gdteam.com</li>
+                                <li><i class="fas fa-clock"></i> Lun-Vie: 9:00 - 18:00</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-bottom-actividad">
+                        <p>&copy; 2024 GDTeam Solutions. Todos los derechos reservados.</p>
+                        <p class="footer-creditos">Actividad 1 - Fundamentos de Sistemas Web - Universidad ESPE</p>
+                    </div>
+                </div>
+            </footer>
+        </section>
+
+        <!-- Análisis del Código -->
+        <section class="analisis-codigo">
+            <h2><i class="fas fa-code"></i> Análisis del Código</h2>
+            
+            <div class="analisis-grid">
+                <div class="analisis-card">
+                    <div class="analisis-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>Estructura HTML5</h3>
+                    <ul>
+                        <li>Uso de etiquetas semánticas</li>
+                        <li>Jerarquía correcta de encabezados</li>
+                        <li>Atributos alt en imágenes</li>
+                        <li>Estructura lógica del contenido</li>
+                    </ul>
+                </div>
+                
+                <div class="analisis-card">
+                    <div class="analisis-icon">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3>Estilos CSS3</h3>
+                    <ul>
+                        <li>Selectores específicos</li>
+                        <li>Propiedades modernas de CSS3</li>
+                        <li>Variables CSS para consistencia</li>
+                        <li>Animaciones y transiciones</li>
+                    </ul>
+                </div>
+                
+                <div class="analisis-card">
+                    <div class="analisis-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <ul>
+                        <li>Media queries estratégicas</li>
+                        <li>Enfoque mobile-first</li>
+                        <li>Imágenes responsivas</li>
+                        <li>Breakpoints bien definidos</li>
+                    </ul>
+                </div>
+                
+                <div class="analisis-card">
+                    <div class="analisis-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Cumplimiento de Requisitos</h3>
+                    <ul>
+                        <li>Página web completa ✓</li>
+                        <li>Diseño responsive ✓</li>
+                        <li>Organización en carpetas ✓</li>
+                        <li>Código comentado ✓</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="codigo-ejemplo">
+                <h3><i class="fas fa-laptop-code"></i> Ejemplo de Media Query</h3>
+                <pre><code>
+/* Media query para tablets */
+@media (max-width: 768px) {
+    .contenido-principal-actividad {
+        flex-direction: column;
+    }
+    
+    .seccion-noticias {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    
+    .menu-principal-actividad nav ul {
+        flex-direction: column;
+    }
+    
+    .nav-list {
+        display: none;
+        flex-direction: column;
+    }
+    
+    .nav-list.active {
+        display: flex;
+    }
+}
+                </code></pre>
+            </div>
+        </section>
+
+        <!-- Navegación entre actividades -->
+        <section class="navegacion-actividades">
+            <h2><i class="fas fa-arrow-right"></i> Continuar con Otras Actividades</h2>
+            <div class="actividades-links">
+                <a href="index.html" class="btn btn-primary">
+                    <i class="fas fa-home"></i> Volver al Inicio
+                </a>
+                <a href="index.html#actividad2" class="btn btn-secondary">
+                    <i class="fas fa-edit"></i> Ver Actividad 2
+                </a>
+                <a href="index.html#actividad3" class="btn btn-success">
+                    <i class="fas fa-user-plus"></i> Ver Actividad 3
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer: Pie de página -->
+        <footer class="footer">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3><i class="fas fa-university"></i> Universidad ESPE</h3>
+                    <p>Actividad 1 - Página Web Responsive</p>
+                    <p>Fundamentos de Sistemas Web</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3><i class="fas fa-link"></i> Enlaces</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Página Principal</a></li>
+                        <li><a href="#actividad"><i class="fas fa-chevron-right"></i> Actividad 1</a></li>
+                        <li><a href="index.html#actividad2"><i class="fas fa-chevron-right"></i> Actividad 2</a></li>
+                        <li><a href="index.html#actividad3"><i class="fas fa-chevron-right"></i> Actividad 3</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3><i class="fas fa-info-circle"></i> Información</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-user-graduate"></i> Estudiante: David Ivan Granada Pachacama</li>
+                        <li><i class="fas fa-calendar"></i> Semestre: Oct 2025 - Feb 2026</li>
+                        <li><i class="fas fa-book"></i> Asignatura: Fundamentos de Sistemas Web</li>
+                        <li><i class="fas fa-tasks"></i> Actividad: #1 - Página Web</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025-2026 Universidad de las Fuerzas Armadas ESPE - Actividad 1 - Página Web Responsive.</p>
+                <p class="footer-note">Desarrollado con HTML5, CSS3 y principios de diseño responsive.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts JavaScript -->
+    <script src="js/menu.js"></script>
+    <script src="js/scroll.js"></script>
+    
+    <!-- Script específico para esta página -->
+    <script>
+        // Simulación de funcionalidades para la página de actividad 1
+        document.addEventListener('DOMContentLoaded', function() {
+            // Suscripción al newsletter
+            const suscripcionBtn = document.querySelector('.btn-suscripcion');
+            const suscripcionInput = document.querySelector('.suscripcion-input');
+            
+            if (suscripcionBtn && suscripcionInput) {
+                suscripcionBtn.addEventListener('click', function() {
+                    if (suscripcionInput.value && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(suscripcionInput.value)) {
+                        alert('¡Gracias por suscribirte a nuestro newsletter!');
+                        suscripcionInput.value = '';
+                    } else {
+                        alert('Por favor, ingresa un email válido.');
+                    }
+                });
+                
+                suscripcionInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        suscripcionBtn.click();
+                    }
+                });
+            }
+            
+            // Botones de promoción
+            const promocionBtns = document.querySelectorAll('.btn-promocion');
+            promocionBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const promocionTitulo = this.closest('.promocion').querySelector('h3').textContent;
+                    alert(`Has seleccionado la promoción: "${promocionTitulo}"\n\nEn una implementación real, esto te redirigiría a una página de compra o formulario de contacto.`);
+                });
+            });
+            
+            // Enlaces de noticias
+            const noticiaLinks = document.querySelectorAll('.noticia-link');
+            noticiaLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const noticiaTitulo = this.closest('.noticia').querySelector('h3').textContent;
+                    alert(`Has seleccionado la noticia: "${noticiaTitulo}"\n\nEn una implementación real, esto te llevaría al artículo completo.`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

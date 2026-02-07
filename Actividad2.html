@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 2 - Formulario de Registro</title>
+    
+    <!-- Enlaces a recursos externos -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Enlaces a archivos CSS locales -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/logoespe.png" type="image/png">
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="container">
+       
+        <!-- Header: Encabezado del sitio -->
+        <header class="header">
+            <div class="container">
+                <!-- Logo del sitio web -->
+                <div class="logo">
+                    <img src="images/logoespe.png" alt="Logo ESPE" class="logo-espe">
+                    <div class="logo-text">
+                        <h1><i class="fas fa-edit"></i> Actividad 2 - Formulario de Registro</h1>
+                        <p>Fundamentos de Sistemas Web - Universidad ESPE</p>
+                    </div>
+                </div>
+               
+                <!-- Menú de navegación principal -->
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                        <li><a href="actividad1.html"><i class="fas fa-file-code"></i> Actividad 1</a></li>
+                        <li><a href="#actividad"><i class="fas fa-star"></i> Actividad 2</a></li>
+                        <li><a href="index.html#actividad3"><i class="fas fa-user-plus"></i> Actividad 3</a></li>
+                        <li><a href="index.html#informacion"><i class="fas fa-info-circle"></i> Información</a></li>
+                    </ul>
+                   
+                    <!-- Ícono de menú hamburguesa para dispositivos móviles -->
+                    <div class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Sección Hero de la Actividad 2 -->
+        <section class="hero" id="actividad">
+            <div class="hero-content">
+                <h2>Actividad de Aprendizaje No. 2</h2>
+                <h3>Formulario de Registro con Validación JavaScript</h3>
+                <p>Desarrollo de un formulario de registro responsive con validación básica de campos utilizando JavaScript. Este formulario se adapta a diferentes dispositivos y valida los datos ingresados por el usuario.</p>
+                <div class="hero-buttons">
+                    <a href="#descripcion" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Ver Descripción
+                    </a>
+                    <a href="#formulario" class="btn btn-secondary">
+                        <i class="fas fa-edit"></i> Probar Formulario
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/600x400/2c3e50/ffffff?text=Form+Validation" alt="Validación de formularios">
+            </div>
+        </section>
+
+        <!-- Descripción de la Actividad -->
+        <section class="descripcion-actividad-detallada" id="descripcion">
+            <h2><i class="fas fa-clipboard-list"></i> Descripción de la Actividad</h2>
+            
+            <div class="descripcion-content">
+                <div class="descripcion-text">
+                    <h3>Objetivo General</h3>
+                    <p>Crear un formulario de registro de usuario con diseño responsive que implemente validación básica de campos utilizando JavaScript para garantizar la integridad de los datos ingresados.</p>
+                    
+                    <h3>Requisitos Específicos</h3>
+                    <ul>
+                        <li><strong>Formulario responsive:</strong> Diseño que se adapte a diferentes dispositivos (escritorio, tabletas, móviles)</li>
+                        <li><strong>Campos básicos:</strong> Incluir campos para nombres, apellidos, fecha de nacimiento, país, email y contraseña</li>
+                        <li><strong>Validación JavaScript:</strong> Implementar validación básica de campos obligatorios</li>
+                        <li><strong>Mensajes de error:</strong> Mostrar mensajes de error cuando los campos obligatorios no estén completos</li>
+                        <li><strong>Botón de registro:</strong> Implementar lógica para procesar el formulario cuando todos los campos sean válidos</li>
+                        <li><strong>Organización de archivos:</strong> Separar HTML, CSS y JavaScript en archivos diferentes</li>
+                    </ul>
+                    
+                    <h3>Validaciones Implementadas</h3>
+                    <div class="validaciones">
+                        <div class="validacion">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Campos obligatorios completos</span>
+                        </div>
+                        <div class="validacion">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Formato de email válido</span>
+                        </div>
+                        <div class="validacion">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Longitud mínima de contraseña</span>
+                        </div>
+                        <div class="validacion">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Fecha de nacimiento válida</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="descripcion-imagen">
+                    <div class="imagen-container">
+                        <img src="https://via.placeholder.com/400x300/3498db/ffffff?text=Form+Validation+JS" alt="Validación JavaScript">
+                        <p class="imagen-desc">Validación de formularios con JavaScript</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementación del Formulario -->
+        <section class="implementacion-formulario" id="formulario">
+            <h2><i class="fas fa-edit"></i> Formulario de Registro - Actividad 2</h2>
+            <p class="section-subtitle">Complete todos los campos obligatorios para registrarse en nuestro sistema.</p>
+            
+            <div class="formulario-container">
+                <!-- Mensajes de estado del formulario -->
+                <div id="mensajeEstado" class="mensaje-estado"></div>
+                
+                <!-- Formulario de registro básico -->
+                <form id="formularioRegistroBasico">
+                    <!-- Campos del formulario -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombreBasico">
+                                <i class="fas fa-user"></i> Nombres *
+                            </label>
+                            <input type="text" id="nombreBasico" name="nombreBasico" 
+                                   placeholder="Ingrese sus nombres" required>
+                            <div class="error-message" id="errorNombreBasico"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="apellidoBasico">
+                                <i class="fas fa-user"></i> Apellidos *
+                            </label>
+                            <input type="text" id="apellidoBasico" name="apellidoBasico" 
+                                   placeholder="Ingrese sus apellidos" required>
+                            <div class="error-message" id="errorApellidoBasico"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fechaBasico">
+                                <i class="fas fa-calendar"></i> Fecha de Nacimiento *
+                            </label>
+                            <input type="date" id="fechaBasico" name="fechaBasico" required>
+                            <div class="error-message" id="errorFechaBasico"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="paisBasico">
+                                <i class="fas fa-globe-americas"></i> País *
+                            </label>
+                            <select id="paisBasico" name="paisBasico" required>
+                                <option value="">Seleccione su país...</option>
+                                <option value="EC">Ecuador</option>
+                                <option value="AR">Argentina</option>
+                                <option value="MX">México</option>
+                                <option value="CO">Colombia</option>
+                                <option value="ES">España</option>
+                                <option value="CL">Chile</option>
+                                <option value="PE">Perú</option>
+                                <option value="US">Estados Unidos</option>
+                            </select>
+                            <div class="error-message" id="errorPaisBasico"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="emailBasico">
+                                <i class="fas fa-envelope"></i> Email *
+                            </label>
+                            <input type="email" id="emailBasico" name="emailBasico" 
+                                   placeholder="ejemplo@correo.com" required>
+                            <div class="error-message" id="errorEmailBasico"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="passwordBasico">
+                                <i class="fas fa-lock"></i> Contraseña *
+                            </label>
+                            <input type="password" id="passwordBasico" name="passwordBasico" 
+                                   placeholder="Mínimo 6 caracteres" required minlength="6">
+                            <div class="error-message" id="errorPasswordBasico"></div>
+                            <div class="field-info">Mínimo 6 caracteres</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Botones de acción -->
+                    <div class="form-buttons">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-user-plus"></i> Registrar Usuario
+                        </button>
+                        
+                        <button type="reset" class="btn btn-secondary">
+                            <i class="fas fa-redo"></i> Limpiar Formulario
+                        </button>
+                        
+                        <button type="button" id="btnEjemplo" class="btn btn-info">
+                            <i class="fas fa-magic"></i> Datos de Ejemplo
+                        </button>
+                    </div>
+                    
+                    <!-- Nota de campos obligatorios -->
+                    <div class="form-note">
+                        <p>* Campos obligatorios</p>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Información de validación -->
+            <div class="info-validacion">
+                <h3><i class="fas fa-check-circle"></i> Validaciones Implementadas</h3>
+                <div class="validaciones-grid">
+                    <div class="validacion-item">
+                        <div class="validacion-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4>Nombres y Apellidos</h4>
+                        <p>Campo obligatorio. No puede estar vacío.</p>
+                    </div>
+                    <div class="validacion-item">
+                        <div class="validacion-icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <h4>Fecha de Nacimiento</h4>
+                        <p>Debe ser una fecha válida y no puede estar vacía.</p>
+                    </div>
+                    <div class="validacion-item">
+                        <div class="validacion-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Email</h4>
+                        <p>Formato válido de email (usuario@dominio.com).</p>
+                    </div>
+                    <div class="validacion-item">
+                        <div class="validacion-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h4>Contraseña</h4>
+                        <p>Mínimo 6 caracteres. Campo obligatorio.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Código de Validación -->
+        <section class="codigo-validacion">
+            <h2><i class="fas fa-code"></i> Código de Validación JavaScript</h2>
+            
+            <div class="codigo-tabs">
+                <div class="tabs">
+                    <button class="tab active" data-tab="validacion">Validación</button>
+                    <button class="tab" data-tab="mensajes">Mensajes</button>
+                    <button class="tab" data-tab="eventos">Eventos</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div id="validacion" class="tab-pane active">
+                        <h3>Función Principal de Validación</h3>
+                        <pre><code>
+function validarFormularioBasico() {
+    // Obtener valores de los campos
+    const nombre = document.getElementById('nombreBasico').value.trim();
+    const apellido = document.getElementById('apellidoBasico').value.trim();
+    const fecha = document.getElementById('fechaBasico').value;
+    const pais = document.getElementById('paisBasico').value;
+    const email = document.getElementById('emailBasico').value.trim();
+    const password = document.getElementById('passwordBasico').value;
+    
+    // Limpiar errores anteriores
+    limpiarErroresBasico();
+    
+    // Validar cada campo
+    let esValido = true;
+    
+    if (!nombre) {
+        mostrarErrorBasico('nombreBasico', 'El nombre es obligatorio');
+        esValido = false;
+    }
+    
+    if (!apellido) {
+        mostrarErrorBasico('apellidoBasico', 'El apellido es obligatorio');
+        esValido = false;
+    }
+    
+    if (!fecha) {
+        mostrarErrorBasico('fechaBasico', 'La fecha de nacimiento es obligatoria');
+        esValido = false;
+    }
+    
+    if (!pais) {
+        mostrarErrorBasico('paisBasico', 'Debe seleccionar un país');
+        esValido = false;
+    }
+    
+    if (!email) {
+        mostrarErrorBasico('emailBasico', 'El email es obligatorio');
+        esValido = false;
+    } else if (!validarEmailBasico(email)) {
+        mostrarErrorBasico('emailBasico', 'El formato del email no es válido');
+        esValido = false;
+    }
+    
+    if (!password) {
+        mostrarErrorBasico('passwordBasico', 'La contraseña es obligatoria');
+        esValido = false;
+    } else if (password.length < 6) {
+        mostrarErrorBasico('passwordBasico', 'La contraseña debe tener al menos 6 caracteres');
+        esValido = false;
+    }
+    
+    return esValido;
+}
+                        </code></pre>
+                    </div>
+                    
+                    <div id="mensajes" class="tab-pane">
+                        <h3>Función para Mostrar Mensajes</h3>
+                        <pre><code>
+function mostrarMensajeEstado(mensaje, tipo) {
+    const mensajeDiv = document.getElementById('mensajeEstado');
+    
+    if (mensajeDiv) {
+        mensajeDiv.textContent = mensaje;
+        mensajeDiv.className = 'mensaje-estado';
+        
+        if (tipo === 'exito') {
+            mensajeDiv.classList.add('mensaje-exito');
+        } else if (tipo === 'error') {
+            mensajeDiv.classList.add('mensaje-error');
+        }
+        
+        mensajeDiv.style.display = 'block';
+        
+        // Ocultar mensaje después de 5 segundos
+        setTimeout(() => {
+            mensajeDiv.style.display = 'none';
+        }, 5000);
+    }
+}
+
+function mostrarErrorBasico(campoId, mensaje) {
+    const errorDiv = document.getElementById(`error${capitalize(campoId)}`);
+    if (errorDiv) {
+        errorDiv.textContent = mensaje;
+        errorDiv.style.display = 'block';
+        
+        // Marcar campo como con error
+        const campo = document.getElementById(campoId);
+        if (campo) {
+            campo.classList.add('campo-error');
+        }
+    }
+}
+                        </code></pre>
+                    </div>
+                    
+                    <div id="eventos" class="tab-pane">
+                        <h3>Event Listeners del Formulario</h3>
+                        <pre><code>
+// Configurar eventos cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', function() {
+    // Formulario básico
+    const formularioBasico = document.getElementById('formularioRegistroBasico');
+    
+    if (formularioBasico) {
+        formularioBasico.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            if (validarFormularioBasico()) {
+                // Obtener datos para el mensaje
+                const nombre = document.getElementById('nombreBasico').value.trim();
+                const apellido = document.getElementById('apellidoBasico').value.trim();
+                
+                mostrarMensajeEstado(
+                    `¡Registro exitoso! Bienvenido/a ${nombre} ${apellido}`,
+                    'exito'
+                );
+                
+                // Limpiar formulario después de 3 segundos
+                setTimeout(() => {
+                    formularioBasico.reset();
+                    limpiarErroresBasico();
+                }, 3000);
+            } else {
+                mostrarMensajeEstado(
+                    'Por favor, corrija los errores en el formulario',
+                    'error'
+                );
+            }
+        });
+    }
+    
+    // Botón de datos de ejemplo
+    const btnEjemplo = document.getElementById('btnEjemplo');
+    if (btnEjemplo) {
+        btnEjemplo.addEventListener('click', function() {
+            document.getElementById('nombreBasico').value = 'María';
+            document.getElementById('apellidoBasico').value = 'González';
+            document.getElementById('fechaBasico').value = '1990-05-15';
+            document.getElementById('paisBasico').value = 'EC';
+            document.getElementById('emailBasico').value = 'maria@ejemplo.com';
+            document.getElementById('passwordBasico').value = 'clave123';
+            
+            limpiarErroresBasico();
+            
+            mostrarMensajeEstado(
+                'Se han cargado datos de ejemplo. Puede modificarlos si lo desea.',
+                'info'
+            );
+        });
+    }
+});
+                        </code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparación con Actividad 3 -->
+        <section class="comparacion-actividades">
+            <h2><i class="fas fa-exchange-alt"></i> Comparación: Actividad 2 vs Actividad 3</h2>
+            
+            <div class="comparacion-grid">
+                <div class="comparacion-card">
+                    <h3><i class="fas fa-edit"></i> Actividad 2</h3>
+                    <h4>Formulario Básico</h4>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Validación básica de campos</li>
+                        <li><i class="fas fa-check"></i> Mensajes de error generales</li>
+                        <li><i class="fas fa-check"></i> Diseño responsive simple</li>
+                        <li><i class="fas fa-check"></i> Validación al enviar formulario</li>
+                        <li><i class="fas fa-times"></i> Sin validación en tiempo real</li>
+                        <li><i class="fas fa-times"></i> Sin mensajes específicos por campo</li>
+                        <li><i class="fas fa-times"></i> Validaciones limitadas</li>
+                    </ul>
+                </div>
+                
+                <div class="comparacion-card destacado">
+                    <h3><i class="fas fa-user-plus"></i> Actividad 3</h3>
+                    <h4>Formulario Avanzado</h4>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Validación avanzada de campos</li>
+                        <li><i class="fas fa-check"></i> Mensajes de error específicos por campo</li>
+                        <li><i class="fas fa-check"></i> Diseño responsive mejorado</li>
+                        <li><i class="fas fa-check"></i> Validación en tiempo real</li>
+                        <li><i class="fas fa-check"></i> Confirmación de email y contraseña</li>
+                        <li><i class="fas fa-check"></i> Validación de edad mínima</li>
+                        <li><i class="fas fa-check"></i> Términos y condiciones</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="comparacion-conclusion">
+                <h3><i class="fas fa-graduation-cap"></i> Evolución del Aprendizaje</h3>
+                <p>La Actividad 2 representa el primer acercamiento a la validación de formularios con JavaScript, mientras que la Actividad 3 muestra un dominio más avanzado con validaciones complejas, mejor experiencia de usuario y código más estructurado.</p>
+                <a href="index.html#actividad3" class="btn btn-success">
+                    <i class="fas fa-arrow-right"></i> Ver Actividad 3 Avanzada
+                </a>
+            </div>
+        </section>
+
+        <!-- Navegación entre actividades -->
+        <section class="navegacion-actividades">
+            <h2><i class="fas fa-arrow-right"></i> Explorar Otras Actividades</h2>
+            <div class="actividades-links">
+                <a href="index.html" class="btn btn-primary">
+                    <i class="fas fa-home"></i> Volver al Inicio
+                </a>
+                <a href="actividad1.html" class="btn btn-secondary">
+                    <i class="fas fa-file-code"></i> Ver Actividad 1
+                </a>
+                <a href="index.html#actividad3" class="btn btn-success">
+                    <i class="fas fa-user-plus"></i> Ver Actividad 3
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer: Pie de página -->
+        <footer class="footer">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3><i class="fas fa-university"></i> Universidad ESPE</h3>
+                    <p>Actividad 2 - Formulario de Registro</p>
+                    <p>Fundamentos de Sistemas Web</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3><i class="fas fa-link"></i> Enlaces</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Página Principal</a></li>
+                        <li><a href="actividad1.html"><i class="fas fa-chevron-right"></i> Actividad 1</a></li>
+                        <li><a href="#actividad"><i class="fas fa-chevron-right"></i> Actividad 2</a></li>
+                        <li><a href="index.html#actividad3"><i class="fas fa-chevron-right"></i> Actividad 3</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3><i class="fas fa-info-circle"></i> Información</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-user-graduate"></i> Estudiante: David Ivan Granada Pachacama</li>
+                        <li><i class="fas fa-calendar"></i> Semestre: Oct 2025 - Feb 2026</li>
+                        <li><i class="fas fa-book"></i> Asignatura: Fundamentos de Sistemas Web</li>
+                        <li><i class="fas fa-tasks"></i> Actividad: #2 - Formulario Básico</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025-2026 Universidad de las Fuerzas Armadas ESPE - Actividad 2 - Formulario de Registro.</p>
+                <p class="footer-note">Desarrollado con HTML5, CSS3 y JavaScript para validación de formularios.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts JavaScript -->
+    <script src="js/menu.js"></script>
+    <script src="js/scroll.js"></script>
+    
+    <!-- Script específico para la validación del formulario de la Actividad 2 -->
+    <script>
+        // Funciones de utilidad
+        function capitalize(str) {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        }
+        
+        function validarEmailBasico(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+        
+        // Función para mostrar mensajes de estado
+        function mostrarMensajeEstado(mensaje, tipo) {
+            const mensajeDiv = document.getElementById('mensajeEstado');
+            
+            if (mensajeDiv) {
+                mensajeDiv.textContent = mensaje;
+                mensajeDiv.className = 'mensaje-estado';
+                
+                if (tipo === 'exito') {
+                    mensajeDiv.classList.add('mensaje-exito');
+                } else if (tipo === 'error') {
+                    mensajeDiv.classList.add('mensaje-error');
+                } else if (tipo === 'info') {
+                    mensajeDiv.classList.add('mensaje-info');
+                }
+                
+                mensajeDiv.style.display = 'block';
+                
+                // Ocultar mensaje después de 5 segundos
+                setTimeout(() => {
+                    mensajeDiv.style.display = 'none';
+                }, 5000);
+            }
+        }
+        
+        // Función para mostrar errores específicos
+        function mostrarErrorBasico(campoId, mensaje) {
+            const errorDiv = document.getElementById(`error${capitalize(campoId)}`);
+            if (errorDiv) {
+                errorDiv.textContent = mensaje;
+                errorDiv.style.display = 'block';
+                
+                // Marcar campo como con error
+                const campo = document.getElementById(campoId);
+                if (campo) {
+                    campo.classList.add('campo-error');
+                }
+            }
+        }
+        
+        // Función para limpiar errores
+        function limpiarErroresBasico() {
+            const errores = document.querySelectorAll('.error-message');
+            errores.forEach(error => {
+                error.textContent = '';
+                error.style.display = 'none';
+            });
+            
+            const camposError = document.querySelectorAll('.campo-error');
+            camposError.forEach(campo => {
+                campo.classList.remove('campo-error');
+            });
+        }
+        
+        // Función principal de validación
+        function validarFormularioBasico() {
+            // Obtener valores de los campos
+            const nombre = document.getElementById('nombreBasico').value.trim();
+            const apellido = document.getElementById('apellidoBasico').value.trim();
+            const fecha = document.getElementById('fechaBasico').value;
+            const pais = document.getElementById('paisBasico').value;
+            const email = document.getElementById('emailBasico').value.trim();
+            const password = document.getElementById('passwordBasico').value;
+            
+            // Limpiar errores anteriores
+            limpiarErroresBasico();
+            
+            // Validar cada campo
+            let esValido = true;
+            
+            if (!nombre) {
+                mostrarErrorBasico('nombreBasico', 'El nombre es obligatorio');
+                esValido = false;
+            }
+            
+            if (!apellido) {
+                mostrarErrorBasico('apellidoBasico', 'El apellido es obligatorio');
+                esValido = false;
+            }
+            
+            if (!fecha) {
+                mostrarErrorBasico('fechaBasico', 'La fecha de nacimiento es obligatoria');
+                esValido = false;
+            }
+            
+            if (!pais) {
+                mostrarErrorBasico('paisBasico', 'Debe seleccionar un país');
+                esValido = false;
+            }
+            
+            if (!email) {
+                mostrarErrorBasico('emailBasico', 'El email es obligatorio');
+                esValido = false;
+            } else if (!validarEmailBasico(email)) {
+                mostrarErrorBasico('emailBasico', 'El formato del email no es válido');
+                esValido = false;
+            }
+            
+            if (!password) {
+                mostrarErrorBasico('passwordBasico', 'La contraseña es obligatoria');
+                esValido = false;
+            } else if (password.length < 6) {
+                mostrarErrorBasico('passwordBasico', 'La contraseña debe tener al menos 6 caracteres');
+                esValido = false;
+            }
+            
+            return esValido;
+        }
+        
+        // Configurar eventos cuando el DOM esté listo
+        document.addEventListener('DOMContentLoaded', function() {
+            // Formulario básico
+            const formularioBasico = document.getElementById('formularioRegistroBasico');
+            
+            if (formularioBasico) {
+                formularioBasico.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    
+                    if (validarFormularioBasico()) {
+                        // Obtener datos para el mensaje
+                        const nombre = document.getElementById('nombreBasico').value.trim();
+                        const apellido = document.getElementById('apellidoBasico').value.trim();
+                        
+                        mostrarMensajeEstado(
+                            `¡Registro exitoso! Bienvenido/a ${nombre} ${apellido}`,
+                            'exito'
+                        );
+                        
+                        // Limpiar formulario después de 3 segundos
+                        setTimeout(() => {
+                            formularioBasico.reset();
+                            limpiarErroresBasico();
+                        }, 3000);
+                    } else {
+                        mostrarMensajeEstado(
+                            'Por favor, corrija los errores en el formulario',
+                            'error'
+                        );
+                    }
+                });
+            }
+            
+            // Botón de datos de ejemplo
+            const btnEjemplo = document.getElementById('btnEjemplo');
+            if (btnEjemplo) {
+                btnEjemplo.addEventListener('click', function() {
+                    document.getElementById('nombreBasico').value = 'María';
+                    document.getElementById('apellidoBasico').value = 'González';
+                    document.getElementById('fechaBasico').value = '1990-05-15';
+                    document.getElementById('paisBasico').value = 'EC';
+                    document.getElementById('emailBasico').value = 'maria@ejemplo.com';
+                    document.getElementById('passwordBasico').value = 'clave123';
+                    
+                    limpiarErroresBasico();
+                    
+                    mostrarMensajeEstado(
+                        'Se han cargado datos de ejemplo. Puede modificarlos si lo desea.',
+                        'info'
+                    );
+                });
+            }
+            
+            // Configurar fecha máxima para fecha de nacimiento
+            const fechaInput = document.getElementById('fechaBasico');
+            if (fechaInput) {
+                const hoy = new Date();
+                fechaInput.max = hoy.toISOString().split('T')[0];
+                
+                // Establecer fecha por defecto (hace 25 años)
+                const fechaPorDefecto = new Date(hoy.getFullYear() - 25, hoy.getMonth(), hoy.getDate());
+                fechaInput.value = fechaPorDefecto.toISOString().split('T')[0];
+            }
+            
+            // Tabs del código
+            const tabs = document.querySelectorAll('.tab');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    
+                    // Remover clase active de todos los tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+                    
+                    // Agregar clase active al tab seleccionado
+                    this.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

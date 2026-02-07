@@ -1,0 +1,179 @@
+/* ============================================
+   ARCHIVO: responsive.css
+   DESCRIPCIÓN: Media queries para diseño responsive
+   AUTOR: David Ivan Granada Pachacama
+   ============================================ */
+
+/* ===== MEDIA QUERIES ===== */
+
+/* Tablets y dispositivos medianos (max 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 30px;
+    }
+    
+    .hero-content h2 {
+        font-size: 2.2rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tabletas pequeñas y móviles grandes (max 768px) */
+@media (max-width: 768px) {
+    /* Header responsive */
+    .header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .logo {
+        margin-bottom: 15px;
+    }
+    
+    /* Navegación responsive */
+    .nav {
+        width: 100%;
+    }
+    
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    .nav-list.active {
+        display: flex;
+    }
+    
+    .nav-list li {
+        margin: 10px 0;
+        margin-left: 0;
+    }
+    
+    .nav-list a {
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 0;
+    }
+    
+    /* Hero responsive */
+    .hero {
+        flex-direction: column;
+        padding: 40px 0;
+        text-align: center;
+    }
+    
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    /* Actividad 1 responsive */
+    .contenido-principal-actividad {
+        flex-direction: column;
+    }
+    
+    .seccion-noticias {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    
+    .menu-principal-actividad nav ul {
+        flex-direction: column;
+    }
+    
+    .menu-principal-actividad nav ul li a {
+        text-align: center;
+        border-bottom: 1px solid #3d566e;
+    }
+    
+    /* Actividad 2 responsive */
+    #registroForm {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-buttons {
+        grid-column: span 1;
+        flex-direction: column;
+    }
+    
+    .form-note {
+        grid-column: span 1;
+    }
+    
+    /* Features y testimonios responsive */
+    .features-grid,
+    .testimonials-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .feature-card,
+    .testimonial-card {
+        padding: 20px;
+    }
+    
+    /* Footer responsive */
+    .footer-col {
+        text-align: center;
+    }
+    
+    .contact-info li {
+        justify-content: center;
+    }
+}
+
+/* Dispositivos móviles pequeños (max 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .cabecera-actividad h1 {
+        font-size: 2rem;
+    }
+    
+    .formulario-container {
+        padding: 20px;
+    }
+    
+    .features h2,
+    .testimonials h2 {
+        font-size: 1.6rem;
+    }
+    
+    .footer {
+        padding: 40px 0 15px;
+    }
+}

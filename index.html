@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos de Sistemas Web - Actividades</title>
+    
+    <!-- Enlaces a recursos externos -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Enlaces a archivos CSS locales -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/logoespe.png" type="image/png">
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="container">
+       
+        <!-- Header: Encabezado del sitio -->
+        <header class="header">
+            <div class="container">
+                <!-- Logo del sitio web -->
+                <div class="logo">
+                    <img src="images/logoespe.png" alt="Logo ESPE" class="logo-espe">
+                    <div class="logo-text">
+                        <h1><i class="fas fa-graduation-cap"></i> Fundamentos de Sistemas Web</h1>
+                        <p>Universidad de las Fuerzas Armadas ESPE - Actividades de Aprendizaje</p>
+                    </div>
+                </div>
+               
+                <!-- Menú de navegación principal -->
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+                        <li><a href="actividad1.html"><i class="fas fa-file-code"></i> Actividad 1</a></li>
+                        <li><a href="#actividad2"><i class="fas fa-edit"></i> Actividad 2</a></li>
+                        <li><a href="#actividad3"><i class="fas fa-user-plus"></i> Actividad 3</a></li>
+                        <li><a href="#informacion"><i class="fas fa-info-circle"></i> Información</a></li>
+                    </ul>
+                   
+                    <!-- Ícono de menú hamburguesa para dispositivos móviles -->
+                    <div class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Sección Hero: Contenido principal -->
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <h2>Actividades de Aprendizaje</h2>
+                <p>Fundamentos de Sistemas Web - Semestre Octubre 2025 – Febrero 2026</p>
+                <p>Este sitio contiene las tres actividades de aprendizaje del parcial, desarrolladas con HTML5, CSS3 y JavaScript, implementando diseño responsive y validación de formularios.</p>
+                <div class="hero-buttons">
+                    <a href="actividad1.html" class="btn btn-primary">
+                        <i class="fas fa-file-code"></i> Ver Actividad 1
+                    </a>
+                    <a href="#actividad2" class="btn btn-secondary">
+                        <i class="fas fa-edit"></i> Ver Actividad 2
+                    </a>
+                    <a href="#actividad3" class="btn btn-success">
+                        <i class="fas fa-user-plus"></i> Ver Actividad 3
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-image.jpg" alt="Desarrollo web responsive">
+            </div>
+        </section>
+
+        <!-- Sección de Actividades -->
+        <section class="activities" id="actividades">
+            <h2><i class="fas fa-tasks"></i> Actividades del Parcial</h2>
+            <p class="section-subtitle">Tres actividades de aprendizaje que cubren los fundamentos del desarrollo web moderno.</p>
+            
+            <div class="activities-grid">
+                <!-- Actividad 1 -->
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-file-code"></i>
+                    </div>
+                    <h3>Actividad 1</h3>
+                    <h4>Página Web Responsive</h4>
+                    <p>Diseño y desarrollo de una página web completa con estructura semántica HTML5 y diseño responsive utilizando CSS3.</p>
+                    <ul class="activity-features">
+                        <li><i class="fas fa-check"></i> Cabecera con logo y menú</li>
+                        <li><i class="fas fa-check"></i> Sección de noticias con grid</li>
+                        <li><i class="fas fa-check"></i> Barra lateral de promociones</li>
+                        <li><i class="fas fa-check"></i> Diseño responsive completo</li>
+                    </ul>
+                    <a href="actividad1.html" class="btn btn-primary">
+                        <i class="fas fa-external-link-alt"></i> Ver Actividad Completa
+                    </a>
+                </div>
+                
+                <!-- Actividad 2 -->
+                <div class="activity-card" id="actividad2">
+                    <div class="activity-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <h3>Actividad 2</h3>
+                    <h4>Formulario de Registro</h4>
+                    <p>Formulario de registro de usuario con validación básica JavaScript y diseño responsive adaptado a diferentes dispositivos.</p>
+                    <ul class="activity-features">
+                        <li><i class="fas fa-check"></i> Validación de campos obligatorios</li>
+                        <li><i class="fas fa-check"></i> Mensajes de error personalizados</li>
+                        <li><i class="fas fa-check"></i> Diseño responsive adaptativo</li>
+                        <li><i class="fas fa-check"></i> Validación en tiempo real</li>
+                    </ul>
+                    <div class="demo-form">
+                        <h5><i class="fas fa-play-circle"></i> Demo del Formulario</h5>
+                        <form id="demoForm" class="demo-form-content">
+                            <div class="form-group">
+                                <label for="demoNombre"><i class="fas fa-user"></i> Nombre *</label>
+                                <input type="text" id="demoNombre" placeholder="Tu nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="demoEmail"><i class="fas fa-envelope"></i> Email *</label>
+                                <input type="email" id="demoEmail" placeholder="ejemplo@correo.com" required>
+                            </div>
+                            <button type="submit" class="btn btn-secondary">
+                                <i class="fas fa-paper-plane"></i> Probar Validación
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Actividad 3 -->
+                <div class="activity-card" id="actividad3">
+                    <div class="activity-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3>Actividad 3</h3>
+                    <h4>Formulario Avanzado con Validación</h4>
+                    <p>Formulario de registro completo con validación JavaScript avanzada, mensajes de error específicos y diseño responsive mejorado.</p>
+                    <ul class="activity-features">
+                        <li><i class="fas fa-check"></i> Validación avanzada JavaScript</li>
+                        <li><i class="fas fa-check"></i> Mensajes de error bajo cada campo</li>
+                        <li><i class="fas fa-check"></i> Validación de formato de email</li>
+                        <li><i class="fas fa-check"></i> Validación de edad mínima</li>
+                        <li><i class="fas fa-check"></i> Mensajes de éxito/error generales</li>
+                    </ul>
+                    <div class="activity-preview">
+                        <h5><i class="fas fa-eye"></i> Vista Previa</h5>
+                        <div class="preview-content">
+                            <div class="preview-field">
+                                <label><i class="fas fa-user"></i> Nombres *</label>
+                                <div class="preview-input"></div>
+                            </div>
+                            <div class="preview-field">
+                                <label><i class="fas fa-envelope"></i> Email *</label>
+                                <div class="preview-input"></div>
+                            </div>
+                            <div class="preview-field">
+                                <label><i class="fas fa-lock"></i> Contraseña *</label>
+                                <div class="preview-input"></div>
+                            </div>
+                        </div>
+                        <button class="btn btn-success" onclick="window.location.href='#actividad3-detalle'">
+                            <i class="fas fa-search"></i> Ver Detalles
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detalles de la Actividad 3 -->
+        <section class="activity-details" id="actividad3-detalle">
+            <h2><i class="fas fa-info-circle"></i> Detalles de la Actividad 3</h2>
+            <p class="section-subtitle">Formulario de registro responsive con validación JavaScript completa según los requisitos específicos.</p>
+            
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <div class="requirement-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Diseño Responsive</h3>
+                    <p>El formulario debe verse correctamente en dispositivos de diferente resolución (computadoras, tabletas, móviles).</p>
+                    <ul>
+                        <li>Uso de media queries</li>
+                        <li>Grid y Flexbox responsive</li>
+                        <li>Breakpoints estratégicos</li>
+                    </ul>
+                </div>
+                
+                <div class="requirement-card">
+                    <div class="requirement-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Validación JavaScript</h3>
+                    <p>Validación de campos obligatorios: Nombre, Apellido, País, Email y Contraseña.</p>
+                    <ul>
+                        <li>Validación en tiempo real</li>
+                        <li>Mensajes de error específicos</li>
+                        <li>Validación al enviar formulario</li>
+                    </ul>
+                </div>
+                
+                <div class="requirement-card">
+                    <div class="requirement-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3>Mensajes de Error</h3>
+                    <p>Mensajes de error debajo de cada campo con color, tipo de letra y tamaño adecuados.</p>
+                    <ul>
+                        <li>Feedback visual inmediato</li>
+                        <li>Estilos personalizados</li>
+                        <li>Mensajes contextuales</li>
+                    </ul>
+                </div>
+                
+                <div class="requirement-card">
+                    <div class="requirement-icon">
+                        <i class="fas fa-folder-open"></i>
+                    </div>
+                    <h3>Organización de Archivos</h3>
+                    <p>Archivos CSS, JavaScript e imágenes organizados en carpetas separadas.</p>
+                    <ul>
+                        <li>Estructura modular</li>
+                        <li>Código bien organizado</li>
+                        <li>Facilidad de mantenimiento</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="form-preview-container">
+                <h3><i class="fas fa-eye"></i> Vista Previa del Formulario</h3>
+                <div class="form-preview">
+                    <!-- Vista previa del formulario de la actividad 3 -->
+                    <div class="preview-header">
+                        <h4><i class="fas fa-user-plus"></i> Formulario de Registro</h4>
+                        <p>Complete todos los campos obligatorios (*)</p>
+                    </div>
+                    
+                    <div class="preview-form">
+                        <div class="preview-row">
+                            <div class="preview-group">
+                                <label><i class="fas fa-user"></i> Nombres *</label>
+                                <div class="preview-input-field"></div>
+                                <div class="preview-error">Ejemplo de mensaje de error</div>
+                            </div>
+                            <div class="preview-group">
+                                <label><i class="fas fa-user"></i> Apellidos *</label>
+                                <div class="preview-input-field"></div>
+                                <div class="preview-error"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="preview-row">
+                            <div class="preview-group">
+                                <label><i class="fas fa-calendar"></i> Fecha Nacimiento *</label>
+                                <div class="preview-input-field"></div>
+                                <div class="preview-error"></div>
+                            </div>
+                            <div class="preview-group">
+                                <label><i class="fas fa-globe-americas"></i> País *</label>
+                                <div class="preview-select"></div>
+                                <div class="preview-error"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="preview-row">
+                            <div class="preview-group">
+                                <label><i class="fas fa-envelope"></i> Email *</label>
+                                <div class="preview-input-field"></div>
+                                <div class="preview-error"></div>
+                            </div>
+                            <div class="preview-group">
+                                <label><i class="fas fa-lock"></i> Contraseña *</label>
+                                <div class="preview-input-field password"></div>
+                                <div class="preview-error"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="preview-buttons">
+                            <button class="btn btn-primary">Registrar</button>
+                            <button class="btn btn-secondary">Limpiar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="preview-actions">
+                    <a href="#actividad3-completa" class="btn btn-success">
+                        <i class="fas fa-external-link-alt"></i> Ver Formulario Completo
+                    </a>
+                    <button class="btn btn-info" onclick="mostrarCodigoEjemplo()">
+                        <i class="fas fa-code"></i> Ver Código de Validación
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Ejemplo de código JavaScript -->
+            <div id="codigoEjemplo" class="code-example" style="display: none;">
+                <h4><i class="fas fa-code"></i> Ejemplo de Validación JavaScript</h4>
+                <pre><code>
+// Función para validar el formulario
+function validarFormulario() {
+    const nombre = document.getElementById('nombre').value.trim();
+    const apellido = document.getElementById('apellido').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+    
+    let errores = [];
+    
+    // Validar nombre
+    if (!nombre) {
+        mostrarError('nombre', 'El nombre es obligatorio');
+        errores.push('nombre');
+    }
+    
+    // Validar email
+    if (!email) {
+        mostrarError('email', 'El email es obligatorio');
+        errores.push('email');
+    } else if (!validarEmail(email)) {
+        mostrarError('email', 'El formato del email no es válido');
+        errores.push('email');
+    }
+    
+    // Validar contraseña
+    if (!password) {
+        mostrarError('password', 'La contraseña es obligatoria');
+        errores.push('password');
+    } else if (password.length < 6) {
+        mostrarError('password', 'Mínimo 6 caracteres');
+        errores.push('password');
+    }
+    
+    return errores.length === 0;
+}
+                </code></pre>
+            </div>
+        </section>
+
+        <!-- Formulario Completo de la Actividad 3 -->
+        <section class="full-form-section" id="actividad3-completa">
+            <h2><i class="fas fa-user-plus"></i> Formulario Completo - Actividad 3</h2>
+            <p class="section-subtitle">Formulario de registro responsive con validación JavaScript completa según los requisitos de la actividad.</p>
+            
+            <div class="formulario-container">
+                <!-- Mensajes de estado del formulario -->
+                <div id="mensajeGeneral" class="mensaje-general"></div>
+                
+                <!-- Formulario de registro completo -->
+                <form id="registroFormCompleto">
+                    <!-- Fila 1: Nombres y Apellidos -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombreCompleto">
+                                <i class="fas fa-user"></i> Nombres *
+                                <span class="required-star">*</span>
+                            </label>
+                            <input type="text" id="nombreCompleto" name="nombreCompleto" 
+                                   placeholder="Ingrese sus nombres completos" maxlength="50">
+                            <div class="error-message" id="errorNombre"></div>
+                            <div class="field-info">Máximo 50 caracteres</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="apellidoCompleto">
+                                <i class="fas fa-user"></i> Apellidos *
+                                <span class="required-star">*</span>
+                            </label>
+                            <input type="text" id="apellidoCompleto" name="apellidoCompleto" 
+                                   placeholder="Ingrese sus apellidos" maxlength="50">
+                            <div class="error-message" id="errorApellido"></div>
+                            <div class="field-info">Máximo 50 caracteres</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Fila 2: Fecha de Nacimiento y País -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fechaNacimientoCompleto">
+                                <i class="fas fa-birthday-cake"></i> Fecha de Nacimiento *
+                                <span class="required-star">*</span>
+                            </label>
+                            <input type="date" id="fechaNacimientoCompleto" name="fechaNacimientoCompleto">
+                            <div class="error-message" id="errorFecha"></div>
+                            <div class="field-info">Debe ser mayor de 18 años</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="paisCompleto">
+                                <i class="fas fa-globe-americas"></i> País *
+                                <span class="required-star">*</span>
+                            </label>
+                            <select id="paisCompleto" name="paisCompleto">
+                                <option value="">Seleccione su país...</option>
+                                <option value="EC">Ecuador</option>
+                                <option value="AR">Argentina</option>
+                                <option value="MX">México</option>
+                                <option value="CO">Colombia</option>
+                                <option value="ES">España</option>
+                                <option value="CL">Chile</option>
+                                <option value="PE">Perú</option>
+                                <option value="US">Estados Unidos</option>
+                                <option value="OT">Otro</option>
+                            </select>
+                            <div class="error-message" id="errorPais"></div>
+                            <div class="field-info">Seleccione su país de residencia</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Fila 3: Email y Confirmar Email -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="emailCompleto">
+                                <i class="fas fa-envelope"></i> Email *
+                                <span class="required-star">*</span>
+                            </label>
+                            <input type="email" id="emailCompleto" name="emailCompleto" 
+                                   placeholder="ejemplo@dominio.com" maxlength="100">
+                            <div class="error-message" id="errorEmail"></div>
+                            <div class="field-info">Ej: usuario@correo.com</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirmarEmailCompleto">
+                                <i class="fas fa-envelope"></i> Confirmar Email *
+                                <span class="required-star">*</span>
+                            </label>
+                            <input type="email" id="confirmarEmailCompleto" name="confirmarEmailCompleto" 
+                                   placeholder="Repita su email" maxlength="100">
+                            <div class="error-message" id="errorConfirmarEmail"></div>
+                            <div class="field-info">Debe coincidir con el email anterior</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Fila 4: Contraseña y Confirmar Contraseña -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="passwordCompleto">
+                                <i class="fas fa-lock"></i> Contraseña *
+                                <span class="required-star">*</span>
+                            </label>
+                            <input type="password" id="passwordCompleto" name="passwordCompleto" 
+                                   placeholder="Mínimo 8 caracteres" minlength="8">
+                            <div class="error-message" id="errorPassword"></div>
+                            <div class="field-info">Mínimo 8 caracteres (letras, números y símbolos)</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirmarPasswordCompleto">
+                                <i class="fas fa-lock"></i> Confirmar Contraseña *
+                                <span class="required-star">*</span>
+                            </label>
+                            <input type="password" id="confirmarPasswordCompleto" name="confirmarPasswordCompleto" 
+                                   placeholder="Repita su contraseña" minlength="8">
+                            <div class="error-message" id="errorConfirmarPassword"></div>
+                            <div class="field-info">Debe coincidir con la contraseña anterior</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Términos y condiciones -->
+                    <div class="form-group full-width">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="terminosCompleto" name="terminosCompleto">
+                            <label for="terminosCompleto" class="checkbox-label">
+                                Acepto los <a href="#" class="terms-link">términos y condiciones</a> y la <a href="#" class="terms-link">política de privacidad</a> *
+                                <span class="required-star">*</span>
+                            </label>
+                        </div>
+                        <div class="error-message" id="errorTerminos"></div>
+                    </div>
+                    
+                    <!-- Botones de acción -->
+                    <div class="form-buttons">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-user-plus"></i> Registrar Usuario
+                        </button>
+                        
+                        <button type="reset" class="btn btn-secondary">
+                            <i class="fas fa-redo"></i> Limpiar Formulario
+                        </button>
+                        
+                        <button type="button" id="btnDemoCompleto" class="btn btn-info">
+                            <i class="fas fa-magic"></i> Datos de Prueba
+                        </button>
+                    </div>
+                    
+                    <!-- Nota de campos obligatorios -->
+                    <div class="form-note">
+                        <p><span class="required-star">*</span> Campos obligatorios</p>
+                        <p class="note-small">Este formulario demuestra la validación JavaScript. Los datos no se envían a servidor.</p>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Descripción de la funcionalidad -->
+            <div class="functionality-description">
+                <h3><i class="fas fa-cogs"></i> Funcionalidades Implementadas</h3>
+                <div class="functionality-grid">
+                    <div class="functionality-card">
+                        <div class="functionality-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h4>Validación Completa</h4>
+                        <p>Validación de todos los campos obligatorios con mensajes de error específicos.</p>
+                    </div>
+                    <div class="functionality-card">
+                        <div class="functionality-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Diseño Responsive</h4>
+                        <p>Adaptación perfecta a todos los dispositivos con media queries y layout flexible.</p>
+                    </div>
+                    <div class="functionality-card">
+                        <div class="functionality-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4>Validación en Tiempo Real</h4>
+                        <p>Feedback inmediato al usuario mientras completa el formulario.</p>
+                    </div>
+                    <div class="functionality-card">
+                        <div class="functionality-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h4>Mensajes de Error</h4>
+                        <p>Mensajes claros y específicos debajo de cada campo con error.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Información del Curso -->
+        <section class="course-info" id="informacion">
+            <h2><i class="fas fa-university"></i> Información del Curso</h2>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Asignatura</h3>
+                    <p>Fundamentos de Sistemas Web</p>
+                    <p class="info-detail">NRC: 29286</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <h3>Semestre</h3>
+                    <p>Octubre 2025 – Febrero 2026</p>
+                    <p class="info-detail">Modalidad: Distancia</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Estudiante</h3>
+                    <p>David Ivan Granada Pachacama</p>
+                    <p class="info-detail">NRC: 29286</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Actividades</h3>
+                    <p>3 Actividades de Aprendizaje</p>
+                    <p class="info-detail">Parcial #2</p>
+                </div>
+            </div>
+            
+            <div class="delivery-info">
+                <h3><i class="fas fa-upload"></i> Entrega de Actividades</h3>
+                <div class="delivery-instructions">
+                    <p><strong>Formato de entrega:</strong> Archivo ZIP comprimido</p>
+                    <p><strong>Nombre del archivo:</strong> A#_ApellidosNombres_NRC.zip</p>
+                    <p><strong>Ejemplo:</strong> A3_CastroAndradeJorgeLuis_NRC9088.zip</p>
+                    <p><strong>Contenido:</strong> Carpeta con todos los archivos (HTML, CSS, JS, imágenes)</p>
+                    <p><strong>Plataforma:</strong> Aula Virtual de la Universidad</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer: Pie de página -->
+        <footer class="footer">
+            <div class="footer-grid">
+                <!-- Columna 1: Información de la universidad -->
+                <div class="footer-col">
+                    <h3><i class="fas fa-university"></i> Universidad ESPE</h3>
+                    <p>Universidad de las Fuerzas Armadas ESPE</p>
+                    <p>Ingeniería en tecnologías de la Información Virtual</p>
+                    <p>Fundamentos de Sistemas Web</p>
+                </div>
+                
+                <!-- Columna 2: Enlaces a actividades -->
+                <div class="footer-col">
+                    <h3><i class="fas fa-link"></i> Actividades</h3>
+                    <ul>
+                        <li><a href="actividad1.html"><i class="fas fa-chevron-right"></i> Actividad 1</a></li>
+                        <li><a href="#actividad2"><i class="fas fa-chevron-right"></i> Actividad 2</a></li>
+                        <li><a href="#actividad3"><i class="fas fa-chevron-right"></i> Actividad 3</a></li>
+                        <li><a href="#informacion"><i class="fas fa-chevron-right"></i> Información</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Columna 3: Contacto -->
+                <div class="footer-col">
+                    <h3><i class="fas fa-envelope"></i> Contacto</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-user-graduate"></i> Estudiante: David Ivan Granada Pachacama</li>
+                        <li><i class="fas fa-id-card"></i> NRC: 29286</li>
+                        <li><i class="fas fa-calendar"></i> Semestre: Oct 2025 - Feb 2026</li>
+                        <li><i class="fas fa-book"></i> Asignatura: Fundamentos de Sistemas Web</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Línea divisoria y derechos de autor -->
+            <div class="footer-bottom">
+                <p>&copy; 2025-2026 Universidad de las Fuerzas Armadas ESPE - Fundamentos de Sistemas Web. Actividades de Aprendizaje #1, #2 y #3.</p>
+                <p class="footer-note">Este sitio web es una demostración educativa de las actividades del parcial 2. Desarrollado con HTML5, CSS3 y JavaScript.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts JavaScript -->
+    <script src="js/menu.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/validacion.js"></script>
+    
+    <!-- Script para funcionalidades específicas de esta página -->
+    <script>
+        // Función para mostrar/ocultar código de ejemplo
+        function mostrarCodigoEjemplo() {
+            const codigoDiv = document.getElementById('codigoEjemplo');
+            if (codigoDiv.style.display === 'none') {
+                codigoDiv.style.display = 'block';
+                codigoDiv.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                codigoDiv.style.display = 'none';
+            }
+        }
+        
+        // Validación del formulario demo
+        document.getElementById('demoForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nombre = document.getElementById('demoNombre').value.trim();
+            const email = document.getElementById('demoEmail').value.trim();
+            
+            if (!nombre || !email) {
+                alert('Por favor, complete todos los campos del formulario demo.');
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                alert('Por favor, ingrese un email válido en el formulario demo.');
+            } else {
+                alert('¡Formulario demo válido!\nNombre: ' + nombre + '\nEmail: ' + email);
+            }
+        });
+        
+        // Configurar fecha por defecto para el formulario completo
+        document.addEventListener('DOMContentLoaded', function() {
+            const fechaInput = document.getElementById('fechaNacimientoCompleto');
+            if (fechaInput) {
+                const hoy = new Date();
+                const fechaMaxima = new Date(hoy.getFullYear() - 18, hoy.getMonth(), hoy.getDate());
+                fechaInput.max = fechaMaxima.toISOString().split('T')[0];
+                
+                // Establecer fecha por defecto (hace 25 años)
+                const fechaPorDefecto = new Date(hoy.getFullYear() - 25, hoy.getMonth(), hoy.getDate());
+                fechaInput.value = fechaPorDefecto.toISOString().split('T')[0];
+            }
+            
+            // Botón de datos de prueba
+            const btnDemo = document.getElementById('btnDemoCompleto');
+            if (btnDemo) {
+                btnDemo.addEventListener('click', function() {
+                    document.getElementById('nombreCompleto').value = 'Juan Carlos';
+                    document.getElementById('apellidoCompleto').value = 'Pérez García';
+                    document.getElementById('fechaNacimientoCompleto').value = '1995-05-15';
+                    document.getElementById('paisCompleto').value = 'EC';
+                    document.getElementById('emailCompleto').value = 'juan.perez@ejemplo.com';
+                    document.getElementById('confirmarEmailCompleto').value = 'juan.perez@ejemplo.com';
+                    document.getElementById('passwordCompleto').value = 'Password123!';
+                    document.getElementById('confirmarPasswordCompleto').value = 'Password123!';
+                    document.getElementById('terminosCompleto').checked = true;
+                    
+                    // Limpiar mensajes de error
+                    const errorMessages = document.querySelectorAll('.error-message');
+                    errorMessages.forEach(msg => msg.textContent = '');
+                    
+                    // Mostrar mensaje informativo
+                    const formMessage = document.getElementById('mensajeGeneral');
+                    if (formMessage) {
+                        formMessage.textContent = 'Se han cargado datos de prueba. Revise y modifique según sea necesario.';
+                        formMessage.className = 'mensaje-general info-message';
+                        formMessage.style.display = 'block';
+                    }
+                });
+            }
+            
+            // Validación del formulario completo
+            const formularioCompleto = document.getElementById('registroFormCompleto');
+            if (formularioCompleto) {
+                formularioCompleto.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Obtener valores
+                    const nombre = document.getElementById('nombreCompleto').value.trim();
+                    const apellido = document.getElementById('apellidoCompleto').value.trim();
+                    const fecha = document.getElementById('fechaNacimientoCompleto').value;
+                    const pais = document.getElementById('paisCompleto').value;
+                    const email = document.getElementById('emailCompleto').value.trim();
+                    const confirmarEmail = document.getElementById('confirmarEmailCompleto').value.trim();
+                    const password = document.getElementById('passwordCompleto').value;
+                    const confirmarPassword = document.getElementById('confirmarPasswordCompleto').value;
+                    const terminos = document.getElementById('terminosCompleto').checked;
+                    
+                    // Validar
+                    let errores = [];
+                    
+                    if (!nombre) errores.push('nombre');
+                    if (!apellido) errores.push('apellido');
+                    if (!fecha) errores.push('fecha');
+                    if (!pais) errores.push('pais');
+                    if (!email) errores.push('email');
+                    if (email !== confirmarEmail) errores.push('confirmarEmail');
+                    if (!password || password.length < 8) errores.push('password');
+                    if (password !== confirmarPassword) errores.push('confirmarPassword');
+                    if (!terminos) errores.push('terminos');
+                    
+                    // Mostrar mensaje
+                    const mensaje = document.getElementById('mensajeGeneral');
+                    if (mensaje) {
+                        if (errores.length === 0) {
+                            mensaje.textContent = '¡SU REGISTRO FUE EXITOSO! Bienvenido/a ' + nombre + ' ' + apellido;
+                            mensaje.className = 'mensaje-general success-message';
+                            mensaje.style.display = 'block';
+                            
+                            // Limpiar formulario después de 3 segundos
+                            setTimeout(() => {
+                                formularioCompleto.reset();
+                                mensaje.style.display = 'none';
+                            }, 3000);
+                        } else {
+                            mensaje.textContent = 'EXISTEN CAMPOS QUE REQUIEREN SU ATENCIÓN. Por favor, corrija los errores.';
+                            mensaje.className = 'mensaje-general warning-message';
+                            mensaje.style.display = 'block';
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
